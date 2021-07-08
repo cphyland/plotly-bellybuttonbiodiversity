@@ -20,3 +20,5 @@ function init() {
     });
   });
 }
+//start filling the data inside the select option
+init();
