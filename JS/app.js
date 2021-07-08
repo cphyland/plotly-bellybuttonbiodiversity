@@ -42,3 +42,10 @@ function demographicFunc(valueSelect) {
     ouid = treatOuid(ouid[0].slice(0, 10));
     var valueX = filterValue2.map(v => v.sample_values);
     valueX = valueX[0].slice(0, 10);
+
+    var out_label = filterValue2.map(v => v.otu_labels);
+    var names = treatBacName(out_label[0]).slice(0, 10);
+  // console.log(ouid);
+  // console.log(valueX);
+  // console.log(out_label);
+  // console.log(names);
