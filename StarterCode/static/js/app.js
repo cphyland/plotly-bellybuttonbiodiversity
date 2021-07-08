@@ -1,0 +1,2 @@
+//define variable
+var data;
