@@ -33,23 +33,23 @@ function getInfo(id) {
 
       console.log(metadata)
 
-      // filter meta data info by id
+      // filter by id
       var result = metadata.filter(meta => meta.id.toString() === id)[0];
 
       // select demographic panel to put data
       var demographicInfo = d3.select("#sample-metadata");
       
-      // empty the demographic info panel each time before getting new id info
+      // empty the demographic info before getting new id info
       demographicInfo.html("");
 
-      // grab the necessary demographic data data for the id and append the info to the panel
+      // grab the necessary demographic 
       Object.entries(result).forEach((key) => {   
               demographicInfo.append("h5").text(key[0].toUpperCase() + ": " + key[1] + "\n");    
       });
   });
 }
 
-// Creating function for Data plotting (Bar, gauge, bubble)
+// Create functions for Data plotting (Bar, gauge, bubble)
 function getPlot(id) {
   // getting data from the json file
   d3.json("samples.json").then((data)=> {
