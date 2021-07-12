@@ -66,20 +66,20 @@ function getPlot(id) {
       // Getting the top 10 
       var samplevalues = samples.sample_values.slice(0, 10).reverse();
 
-      // get only top 10 otu ids for the plot OTU and reversing it. 
+       
       var OTU_top = (samples.otu_ids.slice(0, 10)).reverse();
       
-      // get the otu id's to the desired form for the plot
+      
       var OTU_id = OTU_top.map(d => "OTU " + d)
 
-    //   console.log(`OTU IDS: ${OTU_id}`)
+       console.log(`OTU IDS: ${OTU_id}`)
 
 
       // get the top 10 labels for the plot
       var labels = samples.otu_labels.slice(0, 10);
 
-    //   console.log(`Sample Values: ${samplevalues}`)
-    //   console.log(`Id Values: ${OTU_top}`)
+       console.log(`Sample Values: ${samplevalues}`)
+       console.log(`Id Values: ${OTU_top}`)
       // create trace variable for the plot
       var trace = {
           x: samplevalues,
@@ -111,7 +111,7 @@ function getPlot(id) {
       // create the bar plot
       Plotly.newPlot("bar", data, layout);
 
-      //console.log(`ID: ${samples.otu_ids}`)
+      console.log(`ID: ${samples.otu_ids}`)
     
       // The bubble chart
       var trace1 = {
@@ -126,7 +126,7 @@ function getPlot(id) {
 
       };
 
-      // set the layout for the bubble plot
+      // layout for the bubble plot
       var layout_b = {
           xaxis:{title: "OTU ID"},
           height: 600,
